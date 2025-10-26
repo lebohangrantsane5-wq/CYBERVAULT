@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CyberVault</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="STYLES.CSS">
+
+</head>
+<body>
+
+  <ul>
+  <li><a href="INDEX.html">Home</a></li>
+  <li><a class="active" href="news.html">News</a></li>
+  <li><a href="About.html">About Us</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li> <a href="testimonials.html">Testimonials</a></li>
+  <li style="float:inline-end; padding-left: 1px;" ><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></li>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="INDEX.html">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="Terms&conditions.html" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" onclick="document.getElementById('id01').style.display='none'" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<li style="float:inline-end;" ><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button></li>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="INDEX.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="profile.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="ForgotPassword.html">Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+</ul>
+
+  <header class="hero-header">
+    <img src="logo.jpg" width=250vh height=250vh style="float: left;">
+  <div class="header-overlay">
+    <h1>CyberVault</h1>
+    <p>Your digital fortress, fortified</p>
+  </div>
+</header>
+
+ <div class="icon-bar">
+  <br> 
+  
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.nav.prev');
+    const nextBtn = document.querySelector('.nav.next');
+    let current = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(current + 1);
+    }
+
+    function prevSlide() {
+      showSlide(current - 1);
+    }
+
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 7000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(slideInterval);
+      startAutoSlide();
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    startAutoSlide();
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 15000);
+  });
+</script>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+
+var modal = document.getElementById('id02');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+ 
+<section id="new-updates">
+  <div class="newspaper-header">CyberVault Daily - Enhanced IoT Facts for Smart Homes</div>
+  <div class="slideshow">
+
+
+    <div class="slide active">
+      <img src="smartlight.jpg" alt="Smart Lighting">
+      <div class="fact">
+        <h2>Smart Lighting – A Bright Idea or a Risky Glow?</h2>
+        <p>Smart lighting systems let you control ambiance with a tap, even from miles away. But beware: without proper encryption, hackers could remotely control your lights, tracking your routines or signaling you're not home.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="intelligentthermostat.jpg" alt="Smart Thermostats">
+      <div class="fact">
+        <h2>Thermostats That Know Too Much</h2>
+        <p>Smart thermostats offer energy efficiency and comfort, learning your habits over time. But that data can betray your daily schedule to cybercriminals. CyberVault recommends using encrypted connections and disabling location features when not needed.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="cybervaultvoicehub.webp" alt="Voice Assistants">
+      <div class="fact">
+        <h2>Your Voice Assistant Might Be Overhearing More Than You Think</h2>
+        <p>From setting reminders to ordering groceries, voice assistants simplify life. Yet many record and store conversations by default. Dive into your device's settings and prune stored audio — your privacy deserves silence.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="smartsecurity.jpg" alt="Security Cameras">
+      <div class="fact">
+        <h2>Security Cameras: Watching Over You or Watching You?</h2>
+        <p>Wi-Fi security cameras provide peace of mind — until they're hijacked. Default usernames and passwords are an open invitation for intruders. Update credentials immediately and activate two-factor authentication wherever available.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="smartbiometrics.jpg" alt="Smart Locks">
+      <div class="fact">
+        <h2>Smart Locks: The New Digital Front Door</h2>
+        <p>No more keys under doormats. Smart locks are revolutionizing access — but if your Wi-Fi isn't secure, neither is your door. Use strong passphrases, disable remote unlock when traveling, and segment your network for added security.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="cybervaultvoicehub.webp" alt="Home Hubs">
+      <div class="fact">
+        <h2>IoT Hubs – The Brain of Your Smart Home</h2>
+        <p>Your smart hub connects and coordinates everything — lights, locks, speakers, thermostats. But if it's compromised, so is everything else. Keep it updated, limit its permissions, and consider a firewall designed for IoT ecosystems.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="babymonitor.jpg" alt="Baby Monitors">
+      <div class="fact">
+        <h2>Baby Monitors Shouldn’t Be Open to Strangers</h2>
+        <p>Many modern baby monitors stream over the internet, making it easy for parents to check in. But without encryption and password protection, strangers can check in too. Only use monitors from trusted brands with strong security reputations.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="smarttv.jpg" alt="Smart TVs">
+      <div class="fact">
+        <h2>Smart TVs: Entertainment or Surveillance?</h2>
+        <p>Smart TVs can recognize your voice, recommend shows, and even display who's at the door — but many also track your viewing habits and share data with advertisers. Dive into your TV's privacy settings and turn off invasive features.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="iotnetworkmonitoringrouter.jpg" alt="Routers">
+      <div class="fact">
+        <h2>The Router: Your Home’s Digital Fortress</h2>
+        <p>Every smart device flows through your router. Yet, too many users leave it exposed with default credentials or outdated firmware. Set a unique, complex admin password, disable remote management, and perform firmware updates regularly.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="smarthome.jpg" alt="Network Monitoring">
+      <div class="fact">
+        <h2>Network Monitoring: Know Who’s Really Home</h2>
+        <p>With dozens of devices quietly connected to your network, visibility is crucial. Use apps or firewalls to track and name every connected device. If something unfamiliar pops up, take action immediately — digital intruders rarely knock.</p>
+      </div>
+    </div>  
+    <button1 class="nav prev">&#10094;</button1>
+    <button1 class="nav next">&#10095;</button1>
+  </div>
+</section>
+
+<form action="news.html">
+  <div class="container">
+    <h2>Stay ahead of cyber threats!</h2>
+      <p>
+      Subscribe to our newsletter for the latest Iot security insights, news, and expert analysis
+      </p>
+    </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="submit" placeholder="Subscribe" style="background-color:#04AA6D">
+  </div>
+</form>
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="background2.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video> 
+
+</body>
+
+<footer style="color: white;">
+    <dl class="watermark">
+        <dt><a href="INDEX.html"> &copy; 2022 CyberVault. All rights reserved</a></dt>
+    </dl>
+    
+    
+    <p>Follow us on social media:</p>
+      <br>
+    <dl class="social-media">
+                    <dt style="float: inline-end;"><a href="https://www.facebook.com/profile.php?id=61576362601222" target="_blank">
+                          <ion-icon name="logo-facebook"></ion-icon>
+                          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script></a>
+                    </dt> 
+
+                    <dt style="float: right;"><a href="https://www.instagram.com/cyber_vaultrc/" target="_blank">
+                          <ion-icon name="logo-instagram"></ion-icon>
+                          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script></a>
+                    </dt>
+
+                    <dt style="float: right;"><a href="https://x.com/cyber_vaultrc/" target="blank">
+                          <ion-icon name="logo-twitter"></ion-icon>
+                          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script></a>
+                    </dt> 
+
+                </dl>
+</footer>
+</html>
+
+
+

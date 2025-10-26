@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CyberVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="STYLES.CSS">
+</head>
+<body>
+
+  <ul>
+    <li><a href="INDEX.html">Home</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a class="active" href="About.html">About Us</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li style="float: right;"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></li>
+    <li style="float: right;"><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button></li>
+  </ul>
+
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="INDEX.html">
+      <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="Terms&conditions.html" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="id02" class="modal">
+    <form class="modal-content animate" action="INDEX.html" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="profile.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw"><a href="ForgotPassword.html">Forgot password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  <header class="hero-header">
+    <img src="logo.jpg" width="250" height="250" style="float: left;">
+    <div class="header-overlay">
+      <h1>CyberVault</h1>
+      <p>Your digital fortress, fortified</p>
+    </div>
+  </header>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="background2.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <section class="about-section">
+    <div class="main-content">
+      <h1 style="font-size: 10vh; background-color: rgb(112, 112, 112); border-radius: 10px; padding: 10px; border: 10px solid rgb(0, 4, 43);">
+        Founding Members
+      </h1>
+
+      <div class="portfolio-block">
+        <h1>Founder & CEO</h1>
+        <img src="Retu.jpg" alt="Image 1">
+        <h2>Miss Reitumetse Maunye</h2>
+        <p>
+          An electrical engineer with a passion for technology, Reitumetse encountered a frustrating reality while renovating her first home:
+          smart home systems were either prohibitively expensive or unreliable DIY solutions with limited compatibility.
+          Working from her garage during evenings and weekends, she developed a modular integration that unified multiple systems into one user-friendly network.
+          What began as a personal project quickly gained interest from friends and neighbors seeking similar solutions.
+        </p>
+      </div>
+
+      <div class="portfolio-block">
+        <h1>Chief Technical Officer</h1>
+        <img src="Laurence.jpg" alt="Image 2">
+        <h2>Mr Laurence Rantsane</h2>
+        <p>
+          Oversees the technical direction of the company, leading development of CyberVault’s IoT solutions while ensuring security and scalability.
+        </p>
+      </div>
+
+      <div class="portfolio-block">
+        <h1>Marketing & Sales Manager</h1>
+        <img src="Thoriso.jpg" alt="Image 3">
+        <h2>Miss Thoriso Msabe</h2>
+        <p>
+          Develops and executes marketing strategies, manages sales efforts, and drives business growth.
+          She works closely with the leadership team to explore new opportunities and build strong customer relationships.
+        </p>
+      </div>
+
+      <div class="portfolio-block">
+        <h1>Operations Manager</h1>
+        <img src="Tshavhu.jpg" alt="Image 4">
+        <h2>Miss Tshavhungwa Masuvhelele</h2>
+        <p>
+          Oversees daily operations, manages logistics and supply chains, and ensures timely and smooth delivery of products and services.
+        </p>
+      </div>
+
+      <div class="portfolio-block">
+        <h1>Product Manager</h1>
+        <img src="Retang.jpg" alt="Image 5">
+        <h2>Miss Retang Manchidi</h2>
+        <p>
+          Defines and delivers CyberVault’s product vision and strategy.
+          She works closely with developers, customers, and stakeholders to ensure products align with user needs and business goals.
+        </p>
+      </div>
+
+      <div class="portfolio-block">
+        <h1>Software Engineer</h1>
+        <img src="Leah.jpg" alt="Image 6">
+        <h2>Miss Leah Mashiri</h2>
+        <p>
+          Designs, develops, and tests firmware for IoT devices.
+        </p>
+      </div>
+
+      <div class="portfolio-block">
+        <h1>Software Engineer</h1>
+        <img src="Rollin.jpg" alt="Image 7">
+        <h2>Mr Rollin Nasobora Mwesige</h2>
+        <p>
+          Designs, develops, and tests software solutions for IoT device management.
+        </p>
+      </div>
+    </div>
+
+    <div class="side-section">
+      <div class="content">
+        <h2>Mission</h2>
+        <p>Empowering the future of smart homes through advanced sound recognition technology, delivering smart, hands-free control that seamlessly connects people to their living spaces.</p>
+      </div>
+
+      <div class="content">
+        <h2>Vision</h2>
+        <p>To build an inclusive future where smart home technology empowers everyone, regardless of ability, through sound-activated systems that make everyday living simpler, safer, and more accessible.</p>
+      </div>
+
+      <div class="content">
+        <h2>History</h2>
+        <p>CyberVault has been at the forefront of smart home innovation since 2022, starting with a bold vision and ambitious goal driven by the continuous evolution of technology.</p>
+      </div>
+
+      <div class="content">
+        <h2>More Information</h2>
+        <p>CyberVault empowers homeowners to automate routines, reduce energy use, and protect both digital and physical spaces. Whether you're building or upgrading a smart home, CyberVault delivers seamless, connected living experiences.</p>
+        <p>Homeowners can monitor their homes remotely with smart integrations.</p>
+        <p>Our systems accommodate user preferences, save money and the environment, and support voice-controlled task management.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="color: white;">
+    <dl class="watermark">
+      <dt><a href="INDEX.html">&copy; 2022 CyberVault. All rights reserved.</a></dt>
+    </dl>
+
+    <p>Follow us on social media:</p>
+    <dl class="social-media">
+      <dt style="float: right;">
+        <a href="https://x.com/cyber_vaultrc/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+      </dt>
+      <dt style="float: right;">
+        <a href="https://www.instagram.com/cyber_vaultrc/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+      </dt>
+      <dt style="float: right;">
+        <a href="https://www.facebook.com/profile.php?id=61576362601222" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+      </dt>
+    </dl>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </footer>
+
+  <script>
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('id01')) {
+        document.getElementById('id01').style.display = "none";
+      }
+      if (event.target == document.getElementById('id02')) {
+        document.getElementById('id02').style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
